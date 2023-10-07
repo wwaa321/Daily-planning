@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="一个专门为肠易激人群设计的每日饮食规划记录工具，">
+        <title>肠易激-每日饮食规划器</title>
+        <link rel="stylesheet" href="styles.css">
+        
+        <script src="popup.js"></script>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item">
+                <div class="grid-left1">
+                    <div id="dateDiv"></div>
+                </div>
+                <div class="grid-left2">
+                    <div id="date-day"></div>
+                </div>
+                <div class="grid-left3">
+                    <button class="button-clear" id="clearButton">🍉点击清除当前记录🍉</button>
+                </div>
+                <div class="grid-left4">
+                    <h4>说明</h4>
+                    <p>这是一个为肠易激人群提供每日饮食计划管理的工具。灵感来自于《肠道断糖  告别肠易激》这本书。
+
+                        <br>其中的食谱摘自书中提到的 澳大利亚蒙纳士大学提供的对照表。（注意：食谱仅作参考，请根据自己实际情况做出选择，切记注意是否包含自己过敏的食物）。
+                        
+                        <br>本工具产生的数据保存在您所用的浏览器中，为确保数据安全，请不要在公共设备上使用本工具。本工具不会远程记录使用者的任何数据信息，请放心使用。</p>
+                        <br>
+                        <a href="http://www.moaono.com" class="no-underline"><b>MOAONO.com</b></a> icon by <a href="https://icons8.com/" class="no-underline">icons8</a>
+                        <div class="black-line">
+                            <a href="https://support.qq.com/products/118721/" target="_blank" class="no-underline"><h3>📝提建议</h3></a>
+                        </div>
+                </div>
+                
+
+            </div>
+            <div class="grid-middle">
+                <div class="grid-middle1">
+                    <h3>早餐</h3>
+                    <div class="black-line"></div>
+                    <div class="item-list" id="breakfastList">
+                        <!-- 早餐列表 -->
+                    </div>
+                </div>
+
+                <div class="grid-middle2">
+                    <h3>午餐</h3>
+                    <div class="black-line"></div>
+                    <div class="item-list" id="lunchList">
+                        <!-- 午餐列表 -->
+                    </div>
+                </div>
+                <div class="grid-middle3">
+                    <h3>晚餐</h3>
+                    <div class="black-line"></div>
+                    <div class="item-list" id="dinnerList">
+                        <!-- 晚餐列表 -->
+                    </div>
+                </div>
+                <div class="block-water">
+                    <div style="display: grid; grid-template-columns: 45% 20% 20%;margin: 0;">
+                        <h3>饮水</h3>
+                        <button class="button-count" id="waterIncrementButton">+</button>
+                        <button class="button-count" id="waterDecrementButton">-</button>
+                    </div>
+                    <h1 id="waterCount" style="text-align: center;margin: 0;">0</h1>
+                    <h3 style="text-align: right;">杯</h3>
+                </div>
+                <div class="block-tea">
+                    <div style="display: grid; grid-template-columns: 45% 20% 20%;margin: 0;">
+                        <h3>茶</h3>
+                        <button class="button-count" id="teaIncrementButton">+</button>
+                        <button class="button-count" id="teaDecrementButton">-</button>
+                    </div>
+                    <h1 id="teaCount" style="text-align: center;margin: 0;">0</h1>
+                    <h3 style="text-align: right;">杯</h3>
+                </div>
+                <div class="block-coffee">
+                    <div style="display: grid; grid-template-columns: 45% 20% 20%;margin: 0;">
+                        <h3>咖啡</h3>
+                        <button class="button-count" id="coffeeIncrementButton">+</button>
+                        <button class="button-count" id="coffeeDecrementButton">-</button>
+                    </div>
+                    <h1 id="coffeeCount" style="text-align: center;margin: 0;">0</h1>
+                    <h3 style="text-align: right;">杯</h3>
+                </div>
+              
+            </div>
+
+
+            <div class="grid-right">
+                <h3>低FODMAP食谱</h3>
+                <div class="grid-right-w">
+                    <ul class="tabs">
+                        <li class="active">谷物</li>
+                        <li>肉制品</li>
+                        <li>蔬菜菌类</li>
+                        <li>水果</li>
+                        <li>坚果</li>
+                    </ul>
+                    <div class="black-line"></div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="grainTab">谷物食谱
+                            <div class="grid-right-list" id="grainList">
+                                <!-- 谷物食谱列表 -->
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="meatTab">肉制品食谱
+                            <div class="grid-right-list" id="meatList">
+                                <!-- 肉制品食谱列表 -->
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="vegMushroomTab">蔬菜菌类食谱
+                            <div class="grid-right-list" id="vegMushroomList">
+                                <!-- 蔬菜菌类食谱列表 -->
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="fruitTab">水果食谱
+                            <div class="grid-right-list" id="fruitList">
+                                <!-- 水果食谱列表 -->
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="nutTab">坚果食谱
+                            <div class="grid-right-list" id="nutList">
+                                <!-- 坚果食谱列表 -->
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+          
+                
+         </body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "肠易激-每日饮食规划器",
+  "version": "1.0",
+  "description": "一个专门为肠易激人群设计的每日饮食规划记录工具。",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "Open Extension"
+
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+
+  
+}
